@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One Last Time ❤️</title>
+
+<style>
+body{
+    margin:0;
+    background:#000;
+    color:white;
+    font-family:Arial,sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    height:100vh;
+}
+
+h1{
+    margin:20px;
+}
+
+video{
+    width:90%;
+    max-width:500px;
+    border-radius:15px;
+    box-shadow:0 0 25px rgba(255,255,255,.3);
+}
+
+button{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    border-radius:10px;
+    font-size:18px;
+    cursor:pointer;
+    background:#ff2d55;
+    color:white;
+}
+</style>
+
+</head>
+<body>
+
+<h1>🎬 One Last Time ❤️</h1>
+
+<video id="player" controls autoplay></video>
+
+<button onclick="playRandom()">🎲 Another Memory</button>
+
+<script>
+
+const videos = [
+encodeURIComponent("WhatsApp Video 2026-07-26 at 9.14.54 PM.mp4"),
+encodeURIComponent("WhatsApp Video 2026-07-26 at 9.15.54 PM (1).mp4"),
+encodeURIComponent("WhatsApp Video 2026-07-26 at 9.15.54 PM.mp4"),
+encodeURIComponent("WhatsApp Video 2026-07-26 at 9.15.55 PM (1).mp4"),
+encodeURIComponent("WhatsApp Video 2026-07-26 at 9.15.55 PM.mp4"),
+encodeURIComponent("WhatsApp Video 2026-07-26 at 9.15.56 PM (1).mp4"),
+encodeURIComponent("WhatsApp Video 2026-07-26 at 9.15.56 PM.mp4"),
+encodeURIComponent("WhatsApp Video 2026-07-26 at 9.15.57 PM.mp4")
+];
+
+function playRandom(){
+    const random=Math.floor(Math.random()*videos.length);
+    document.getElementById("player").src=videos[random];
+}
+
+playRandom();
+
+</script>
+
+</body>
+</html>
